@@ -1,0 +1,38 @@
+<div class="navbar">
+    <ul class="navbar-ul">
+        <div class="nav-option">
+            LOGO
+        </div>
+        <div class="nav-option-center">
+            <li><%= link_to 'Home', root_path %></li>
+            <li><%= link_to 'Service', root_path %></li>
+            <li><%= link_to 'About', root_path %></li>
+            <li><%= link_to 'Contact', root_path %></li>
+        </div>
+        <div class="nav-option-right">
+            <% if user_signed_in?%>
+                <li class="menu">
+                    <span>
+                        <%= link_to current_user.name, root_path, class:'user-name' %>
+                    </span>
+                    <ul>
+                        <li><%= link_to 'Edit Profile', edit_user_registration_path %></li>
+                        <li><a href="#">Child Link</a></li>
+                        <li><a href="#">Child Link</a></li>
+                        <li><a href="#">Child Link</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <%= link_to 'logout', destroy_user_session_path, method: :delete %>
+                </li>
+            <% else %>
+                <li>
+                    <%= link_to 'Login', new_user_session_path %>
+                </li>
+                <li>
+                    <%= link_to 'Signup', new_user_registration_path %>
+                </li>
+            <% end %>
+        </div>
+    </ul>
+</div>

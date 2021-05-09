@@ -1,0 +1,151 @@
+body {
+  background-color: #040d21;
+  margin: 0%;
+  padding: 0%;
+}
+.logbox {
+  padding: 35px 0px 15px 0px;
+  background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+  margin-left: 410px;
+  width: 450px;
+  height: 440px;
+  border-radius: 20px;
+  margin-top: 50px;
+  box-shadow: rgba(240, 239, 241, 0.15) 0px 48px 100px 40px;
+  font-family: "Times New Roman", Times, serif;
+}
+.login-form {
+  padding: 10px 30px 0px 30px;
+}
+.email-f {
+  color: #ff5858;
+  margin-top: 35px;
+  font-size: larger;
+}
+.email-f > input {
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+  margin-top: 7px;
+  font-size: 20px;
+  border-radius: 4px;
+  width: 370px;
+  padding: 8px;
+  border: none;
+  outline: none;
+}
+.password-f {
+  margin-top: 55px;
+  font-size: larger;
+}
+.password-f > input {
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+  margin-top: 7px;
+  font-size: 20px;
+  border-radius: 4px;
+  width: 370px;
+  padding: 8px;
+  border: none;
+  outline: none;
+}
+.check-box {
+  text-align: left;
+  margin-top: 10px;
+  color: #c4842b;
+}
+.head > span {
+  margin-left: 35%;
+  font-weight: 900;
+  font-size: 45px;
+  text-align: center;
+  display: flex;
+  background-image: linear-gradient(to right, #f9d423 0%, #ff4e50 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+.log-actions {
+  text-align: center;
+  display: flex;
+  margin-top: 50px;
+  margin-left: 43px;
+}
+.log-actions > input {
+  cursor: pointer;
+  background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
+  width: 370px;
+  height: 45px;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  font-size: larger;
+}
+.login-liks {
+  margin-top: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+}
+.login-liks > div > a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #c4842b;
+}
+
+/* now it's time to funny css with signup page */
+.singup-box {
+  height: max-content;
+  width: max-content;
+  box-shadow: rgba(240, 239, 241, 0.15) 0px 48px 100px 40px;
+  font-family: "Courier New", Courier, monospace;
+  border: 1px solid rgb(177, 174, 174);
+  margin-left: 410px;
+  margin-top: 50px;
+  color: rgb(177, 174, 174);
+  padding: 10px 15px 10px 15px;
+  border-radius: 7px;
+}
+.signup-head {
+  text-align: center;
+}
+.field {
+  padding: 0px 10px;
+  margin-top: 20px;
+  border: 1px solid rgb(177, 174, 174);
+  border-radius: 7px;
+}
+.field > input {
+  background-color: #040d21;
+  color: rgb(177, 174, 174);
+  width: 400px;
+  padding: 8px;
+  outline: none;
+  font-size: 17px;
+  border: none;
+}
+.signup-actions {
+  margin-top: 20px;
+}
+.signup-actions > input {
+  cursor: pointer;
+  background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: larger;
+  padding: 10px 15px;
+  width: 465px;
+}
+.signup-login-actions {
+  text-align: center;
+  margin-top: 8px;
+}
+.signup-login-actions > a {
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  font-size: larger;
+  color: rgb(177, 174, 174);
+}

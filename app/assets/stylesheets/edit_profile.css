@@ -1,0 +1,88 @@
+.editbox-box {
+  height: max-content;
+  width: max-content;
+  box-shadow: rgba(240, 239, 241, 0.15) 0px 48px 100px 40px;
+  font-family: "Times New Roman", Times, serif;
+  border: 1px solid rgb(177, 174, 174);
+  margin-left: 250px;
+  margin-top: 50px;
+  color: rgb(177, 174, 174);
+  padding: 10px 15px 10px 15px;
+  border-radius: 7px;
+}
+.editbox-head {
+  text-align: center;
+}
+.e-field {
+  padding: 0px 10px;
+  margin-top: 20px;
+  border: 1px solid rgb(177, 174, 174);
+  border-radius: 7px;
+}
+.e-field > input {
+  background-color: #040d21;
+  color: rgb(177, 174, 174);
+  width: 680px;
+  padding: 8px;
+  outline: none;
+  font-size: 17px;
+  border: none;
+}
+.editbox-actions {
+  margin-top: 20px;
+}
+.editbox-actions > input {
+  cursor: pointer;
+  background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: larger;
+  padding: 10px 15px;
+  width: 744px;
+}
+.editbox-login-actions {
+  text-align: center;
+  margin-top: 8px;
+}
+.editbox-login-actions > a {
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  font-size: larger;
+  color: rgb(177, 174, 174);
+}
+.edit-back {
+  margin-top: 10px;
+  text-align: center;
+}
+.update-password-btn {
+  margin-top: 20px;
+  border-radius: 8px;
+  padding: 7px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid rgb(177, 174, 174);
+}
+.update-password-btn > span {
+  font-size: 22px;
+  cursor: pointer;
+}
+.update-password-btn:hover {
+  background-color: #818c94;
+  color: #040d21;
+}
+.pass-edit-box {
+  display: none;
+  border: 1px solid rgb(177, 174, 174);
+  border-top: none;
+  padding: 10px 10px;
+  border-radius: 8px 8px 0px 0xp;
+}
+.e-pass-msg > span {
+  font-size: 20px;
+  font-weight: 600;
+}
