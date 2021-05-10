@@ -1,0 +1,16 @@
+<div style="color:white">
+	<h1>Show all Images</h1>
+  <h2><%= link_to "Upload New Image", new_userimageupload_path %></h2>
+  <div class="all-imgs">
+    <% @all_img.each do |img|%>
+      <div class="show-imgs">
+        <%= image_tag(img.user_img.url, alt: 'Image', height:'400px', width:'500px') %><br />
+        <span><%= img.user_img.identifier %></span>
+        <div class="img-options" id="img-options">
+          <p>View Image</p>
+          <p>Delete Image</p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
