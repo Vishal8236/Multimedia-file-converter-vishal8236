@@ -1,0 +1,7 @@
+<div style="color:white">
+	<h1>Upload new file</h1>
+	<%= form_with url: "/useraudioupload", method: :post, html: { multipart: true } do |form| %>
+		<%= form.file_field :user_audio, :required => true %>
+		<%= form.submit "Save" %>
+	<% end %>
+</div>	

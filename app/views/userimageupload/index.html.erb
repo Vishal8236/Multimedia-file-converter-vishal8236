@@ -1,14 +1,14 @@
+<%= javascript_pack_tag "show-all-upload-img" %>
 <div style="color:white">
 	<h1>Show all Images</h1>
   <h2><%= link_to "Upload New Image", new_userimageupload_path %></h2>
   <div class="all-imgs">
     <% @all_img.each do |img|%>
-      <div class="show-imgs">
+      <div class="show-imgs" id="show-img">
         <%= image_tag(img.user_img.url, alt: 'Image', height:'400px', width:'500px') %><br />
-        <span><%= img.user_img.identifier %></span>
         <div class="img-options" id="img-options">
           <p>View Image</p>
-          <p>Delete Image</p>
+          <p><%= link_to "Delete Image",  userimageupload_path(img.id), method: :delete, confirm: "Are you sure you want to delete #{img.user_img.identifier}?" %></p>
         </div>
       </div>
     <% end %>

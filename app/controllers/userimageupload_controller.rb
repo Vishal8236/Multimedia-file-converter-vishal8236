@@ -12,6 +12,12 @@ class UserimageuploadController < ApplicationController
 		redirect_to root_path             
 	end
 	  
+	def destroy
+		@get_img = UserImage.find(params[:id])
+		@get_img.destroy
+		redirect_to userimageupload_index_path
+	end
+	
 	def user_params
 		params.permit(:user_image)
 	end
