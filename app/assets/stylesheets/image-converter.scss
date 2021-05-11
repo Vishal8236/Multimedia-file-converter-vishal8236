@@ -1,0 +1,87 @@
+.image-converter{
+	color: white;
+	text-align: center;
+}
+.imgc-heading{
+	margin: 30px 0px;
+}
+.imgc-heading > span{
+	font-weight: 700;
+	font-size: 50px;
+	border-bottom: 3px solid rgb(177, 174, 174);
+}
+.imgc-container{
+	display: inline-flex;
+	flex-direction: column;
+	width: 900px;
+	text-align: center;
+	border-radius: 3px;
+	border: 1px solid rgb(177, 174, 174);
+}
+.imgc-extension{
+	text-align: left;
+	padding: 20px 0px;
+	display: flex;
+	justify-content: space-evenly;
+}
+.imgc-form-group > label{
+	margin-right: 10px;
+	font-size: xx-large;
+}
+.imgc-form-group > select{
+	color: white;
+	padding: 5px;
+	outline: none;
+	border-radius: 3px;
+	border: 1px solid rgb(177, 174, 174);
+	background-color: #040d21;
+	font-size: 24px;
+}
+.img-upload-wrapper{
+	text-align: left;
+	padding: 15px;
+}
+.img-upload-wrapper > div{
+	margin: 30px 0px;
+}
+.imgc-select-file > label{
+	font-size: 30px;
+}
+.imgc-select-file > input{
+	margin-left: 15px;
+	font-size: 25px;
+	border-bottom: 1px solid rgb(177, 174, 174)
+}
+.imgc-zip-btn{
+	display: flex;
+	flex-direction: column;
+}
+.imgc-zip-btn > label{
+	font-size: x-large;
+}
+.imgc-zip-btn > button{
+	margin-top: 30px;
+	padding: 10px;
+	font-size: xx-large;
+}
+
+// image converter suggation
+.imgc-suggation{
+	text-align: center;
+	display: inline-flex;
+}
+.imgg-suggation-head{
+	text-align: left;
+	width: max-content;
+	padding: 10px 110px;
+	margin: 40px 0px;
+	border-radius: 3px;
+	border: 1px solid rgb(177, 174, 174);
+}
+.imgg-suggation-head >span{
+	font-size: 30px;
+}
+.imgg-suggation-head > ul > li{
+	padding: 10px 10px;
+	font-size: x-large;
+}

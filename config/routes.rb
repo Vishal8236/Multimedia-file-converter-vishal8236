@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   resources :userimageupload, only: [:index, :new, :create, :destroy]  
   resources :useraudioupload, only: [:index, :new, :create, :destroy]  
   get 'mediaFileUpload', to: 'user_operation#show_doc_upload_ops'
+  get 'imageconverter', to: 'user_operation#imageconverter'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
