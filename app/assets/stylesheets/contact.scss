@@ -1,0 +1,35 @@
+.contact-from > input[type=text], select, textarea {
+	width: 100%;
+	padding: 12px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	margin-top: 6px;
+	margin-bottom: 16px;
+	resize: vertical;
+	background-color: #323741;
+	color: white;
+	font-size: 20px;
+}
+.contact-from > label{
+	color: white;
+}
+.contact-from > input[type=submit] {
+	background-color: #04AA6D;
+	color: white;
+	padding: 12px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.contact-from > input[type=submit]:hover {
+	background-color: #45a049;
+}
+
+.contact-home{
+	// background-color: rgba(47, 50, 51, 0.815) ;
+	background-color: #323741;
+	padding: 20px 160px;
+	margin: 50px 0px;
+}

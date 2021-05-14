@@ -1,0 +1,12 @@
+// Place all the styles related to the audioconverter controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.audio-upload-convert{
+	text-align: center;
+	margin: 40px 0px;
+}
+.audio-upload-convert > input{
+	background-color: #0c0f12;
+	font-size: 25px;
+	border-bottom: 1px solid rgb(177, 174, 174)
+}

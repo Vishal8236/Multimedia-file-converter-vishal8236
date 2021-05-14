@@ -1,5 +1,5 @@
 .navbar {
-  background-color: rgb(14, 12, 12);
+  background-color:#21252d;
   border-bottom: 1px solid rgb(177, 174, 174);
   margin-top: 0px;
   align-items: center;
@@ -9,7 +9,7 @@
 .navbar-ul {
   display: flex;
   justify-content: space-between;
-  color: rgb(177, 174, 174);
+  color: white;
 }
 .nav-option-center {
   list-style: none;
@@ -19,13 +19,10 @@
 .nav-option-center > li > a {
   text-decoration: none;
   margin: 0px 22px;
-  color: #0066ff;
-}
-a:visited {
-  color: #0066ff;
+  color: white;
 }
 .nav-option-right {
-  color: #0066ff;
+  color: white;
   list-style: none;
   display: flex;
   justify-content: space-around;
@@ -33,7 +30,7 @@ a:visited {
 .nav-option-right > li > a {
   text-decoration: none;
   margin: 0px 15px;
-  color: #0066ff;
+  color: white;
 }
 
 /* dorpdown code */
@@ -77,4 +74,11 @@ a:visited {
   display: block;
   padding: 5px 20px;
   text-decoration: none;
+}
+
+.logout-btn{
+  color: white;
+	background-color: #ed1c24;
+  padding: 5px 8px;
+  border-radius: 3px;
 }

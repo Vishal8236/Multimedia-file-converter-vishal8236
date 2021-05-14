@@ -16,3 +16,66 @@
 	padding: 10px;
 	border: 1px solid rgb(177, 174, 174);
 }
+.upload-new-item{
+	padding: 0px 30px;
+	align-items: center;
+	justify-content: space-between;
+	display: flex;
+}
+
+//upload new docs box
+.upload-file-box{
+	width: 100%;
+	text-align: center;
+	margin-left: 400px;
+	margin-top: 200px;
+	width: 800px;
+}
+.upload-inbox{
+	padding: 10px 0px;
+	color: white;
+	border-radius: 6px;
+	border: 5px solid rgb(177, 174, 174);
+}
+.upload-inbox > span{
+	font-size: 50px;
+	font-weight: 300;
+}
+.form-box{
+	text-align: left;
+	display: inline-flex;
+	flex-direction: column;
+}
+.form-box > input{
+	font-size: 30px;
+	margin-top: 60px;
+}
+.submit-btn > input{
+	margin-top: 70px;
+	background-color: indigo;
+	color: white;
+	padding: 5px 10px;
+	border-radius: 0.3rem;
+	cursor: pointer;
+	font-size: 26px;
+	width: 15rem;
+	text-decoration: none;
+	border: none;
+}
+
+//upload audio styling
+.show-audio{
+	border-radius: 5px;
+	padding: 20px;
+	margin: 28px 10px;
+	border: 5px solid rgb(177, 174, 174);
+	display: inline-block;
+}
+.show-audio > audio{
+	width: 400px;
+}
+.audio-options{
+	margin-top: 20px;
+	display: flex;
+	justify-content: space-evenly;
+}

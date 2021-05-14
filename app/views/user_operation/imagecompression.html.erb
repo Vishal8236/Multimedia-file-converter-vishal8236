@@ -1,0 +1,67 @@
+<script type="text/javascript">
+	function previewFile() {
+
+		var preview = document.querySelector('img');
+
+		var file = document.querySelector('input[type=file]').files[0];
+
+		var reader = new FileReader();
+
+		var percentage = 0.75;
+
+		reader.addEventListener("load", function () {
+
+		preview.src = reader.result;
+
+		preview.onload = function () {
+
+		var canvas = document.getElementById("canvas");
+
+		var ctx = canvas.getContext("2d");
+
+		canvas.height = canvas.width * (preview.height / preview.width);
+
+		var oc = document.createElement('canvas'),octx = oc.getContext('2d');
+
+		oc.width = preview.width * percentage;
+
+		oc.height = preview.height * percentage;
+
+		canvas.width = oc.width;
+
+		canvas.height = oc.height;
+
+		octx.drawImage(preview, 0, 0, oc.width, oc.height);
+
+		octx.drawImage(oc, 0, 0, oc.width, oc.height);
+
+		ctx.drawImage(oc, 0, 0, oc.width, oc.height,0, 0, canvas.width, canvas.height);
+
+		}
+
+		}, false);
+
+		if (file) {
+
+		reader.readAsDataURL(file);
+
+		}
+
+	}
+
+	// document.getElementById('fileOpload').addEventListener('change', previewFile);
+
+
+</script>
+<div id="root" style="color:white">
+	<p>Upload an image and see the result</p>
+	<input type="file" id="fileOpload"><br>
+
+	<img src="" alt="Image preview..." id="image">
+
+	<canvas id="canvas" height=500 width=500></canvas>
+
+
+	<button onclick="previewFile()">Submit</button>
+	<button id="link">Donload file</button>
+</div>

@@ -1,0 +1,47 @@
+<div style="color:white">
+	<div class="image-converter">
+		<div class="imgc-heading">
+			<span>Audio Converter</span>
+		</div>
+		<div class="imgc-container">
+			<%= form_with url: '/audiouploadconversion', :html => {:multipart => true} do |f|%>
+
+				<div class="imgc-extension">
+					<div class="imgc-form-group">
+						<label for="exampleFormControlSelect1">From</label>
+						<%= f.select :from, options_for_select([["mp3", "mp3"], "wav", "m4a", "aac", "mp2"]), :class => 'form-control' %>
+					</div>
+					<div class="imgc-form-group">
+						<label for="exampleFormControlSelect2">To</label>
+						<%= f.select :to, options_for_select([["wav", "wav"],"mp3", "m4a", "aac", "mp2"]), :class => 'form-control' %>
+					</div>
+				</div>
+				<div class="audio-upload-convert">
+					<%= f.file_field :my_file,class:"file-upload-wrapper" %>
+				</div>
+				<div class="action-btn"> 
+					<div class="upload-op">
+						<%= f.submit "Upload" %>
+					</div>
+					<div class="download-op">
+						<%= link_to 'Download Audio', downloadcovertaudio_path, class:"btn btn-primary my-3" %>
+					</div>
+				</div>
+			<% end %>
+		</div>
+		<br />
+		<div class="imgc-suggation">
+			<div class="imgg-suggation-head" id="dropzone" >
+				<span>How it work?</span> 
+				<ul>
+					<li>Click on <strong>Choose file</strong> button.</li>
+					<li>After selecting file select <strong>From</strong> Audio type(MP3, WAV, M4A, AAC, MP2).</li>
+					<li>After that select <strong>TO</strong> Audio type(MP3, WAV, M4A, AAC, MP2).</li>
+					<li>Then click <strong>Upload </strong> button.</li>
+					<li>And finally click <strong>Download</strong> button.</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+</div>

@@ -1,0 +1,49 @@
+<div style="color:white">
+	<div class="image-converter">
+		<div class="imgc-heading">
+			<span>Video Converter</span>
+		</div>
+		<div class="imgc-container">
+			<%= form_with url: '/videouploadconversion', :html => {:multipart => true} do |f|%>
+
+				<div class="imgc-extension">
+					<div class="imgc-form-group">
+						<label for="exampleFormControlSelect1">From</label>
+						<%= f.select :from, options_for_select([["mp4", "mp4"], "avi", "mkv", "amv"]), :class => 'form-control' %>
+					</div>
+					<div class="imgc-form-group">
+						<label for="exampleFormControlSelect2">To</label>
+						<%= f.select :to, options_for_select([["avi", "avi"], "mp4", "mkv", "amv"]), :class => 'form-control' %>
+					</div>
+				</div>
+				<div class="video-upload-convert">
+					<div class="imgc-select-file">
+						<%= f.file_field :my_file,class:"file-upload-wrapper" %>
+					</div>
+				</div>
+				<div class="action-btn"> 
+					<div class="upload-op">
+						<%= f.submit "Upload" %>
+					</div>
+					<div class="download-op">
+						<%= link_to 'Download Video', downloadvideo_path, class:"btn btn-primary my-3" %>
+					</div>
+				</div>
+			<% end %>
+		</div>
+		<br />
+		<div class="imgc-suggation">
+			<div class="imgg-suggation-head" id="dropzone" >
+				<span>How it work?</span> 
+				<ul>
+					<li>Click on <strong>Choose file</strong> button.</li>
+					<li>After selecting file select <strong>From</strong> Image type(JPEG, PNG, BMP).</li>
+					<li>After that select <strong>TO</strong> Image type(JPEG, PNG, BMP).</li>
+					<li>Than click <strong>Upload</strong> button.</li>
+					<li>And finally click <strong>Download</strong> button.</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+</div>

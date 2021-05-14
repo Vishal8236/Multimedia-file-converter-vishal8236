@@ -1,0 +1,48 @@
+<div style="color:white">
+	<div class="image-converter">
+		<div class="imgc-heading">
+			<span>Image optimization</span>
+		</div>
+		<div class="imgc-container">
+			<%= form_with url: '/uploadimagecomp', :html => {:multipart => true} do |f|%>
+				<div class="imgc-extension">
+					<div class="set-height">
+						<label for="exampleFormControlSelect1">Height</label>
+						<%= f.text_field :img_height, :class => 'form-control', placeholder: "set height", :required => true %>
+					</div>
+					<div class="set-width">
+						<label for="exampleFormControlSelect2">Width</label>
+						<%= f.text_field :img_width, :class => 'form-control', placeholder: "set width",:required => true %>
+					</div>
+				</div>
+				<div class="img-upload-compress">
+					<div class="imgc-select-file">
+						<%= f.file_field :my_file,class:"file-upload-wrapper", :required => true %>
+					</div>
+				</div>
+				<div class="action-btn"> 
+					<div class="upload-op">
+						<%= f.submit "Upload" %>
+					</div>
+					<div class="download-op">
+						<%= link_to 'Download Compress Image', downloadimagecompress_path, class:"btn btn-primary my-3" %>
+					</div>
+				</div>
+			<% end %>
+		</div>
+		<br />
+		<div class="imgc-suggation">
+			<div class="imgg-suggation-head" id="dropzone" >
+				<span>How it work?</span> 
+				<ul>
+					<li>Set compress image <strong>Heigth</strong>.</li>
+					<li>Set compress image <strong>Width</strong>.</li>
+					<li>Click on <strong>Choose file</strong> button and select file.</li>
+					<li>Click on <strong>upload file</strong> button.</li>
+					<li>And finally click <strong>download</strong> button.</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+</div>

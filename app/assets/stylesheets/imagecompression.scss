@@ -1,0 +1,128 @@
+// Place all the styles related to the imagecompression controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.image-converter{
+	color: white;
+	text-align: center;
+}
+.imgc-heading{
+	margin: 30px 0px;
+}
+.imgc-heading > span{
+	font-weight: 700;
+	font-size: 50px;
+	border-bottom: 3px solid rgb(177, 174, 174);
+}
+.imgc-container{
+	display: inline-flex;
+	flex-direction: column;
+	width: 900px;
+	text-align: center;
+	border-radius: 3px;
+	border: 1px solid rgb(177, 174, 174);
+}
+.imgc-extension{
+	padding: 20px 0px;
+	display: flex;
+	justify-content: space-evenly;
+}
+.imgc-form-group > label{
+	margin-right: 10px;
+	font-size: xx-large;
+}
+.imgc-form-group > select{
+	color: white;
+	padding: 5px;
+	outline: none;
+	border-radius: 3px;
+	border: 1px solid rgb(177, 174, 174);
+	background-color: #040d21;
+	font-size: 24px;
+}
+.img-upload-compress{
+	text-align: center;
+}
+//set height and width
+.set-height > label{
+	font-size: 25px;
+	margin-right: 7px;
+}
+.set-height > input{
+	border-radius: 3px;
+	font-size: 18px;
+	outline: none;
+	width: 5rem;
+	height: 2rem;
+	padding: 0px 5px;
+}
+.set-width > label{
+	font-size: 25px;
+	margin-right: 7px;
+}
+.set-width > input{
+	font-size: 18px;
+	outline: none;
+	width: 5rem;
+	border-radius: 3px;
+	height: 2rem;
+	padding: 0px 5px;
+}
+
+// image converter suggation
+.imgc-suggation{
+	text-align: center;
+	display: inline-flex;
+}
+.imgg-suggation-head{
+	text-align: left;
+	width: 820px;
+	padding: 10px 38px;
+	margin: 40px auto;
+	border-radius: 3px;
+	border: 1px solid rgb(177, 174, 174);
+}
+.imgg-suggation-head >span{
+	font-size: 30px;
+}
+.imgg-suggation-head > ul > li{
+	padding: 10px 10px;
+	font-size: x-large;
+}
+.img-upload-compress{
+	text-align: center;
+	margin: 40px 0px;
+}
+
+// action button upload and download
+.action-btn{
+	display: flex;
+	justify-content: space-evenly;
+	padding: 10px 0px;
+	align-items: center;
+}
+.upload-op > input{
+	padding: 5px 10px;
+	color: white;
+	background-color: #ed1c24;
+	font-size: 26px;
+	border-radius: 0.3rem;
+	cursor: pointer;
+	width: 15rem;
+	border: none;
+}
+.download-op > a{
+	background-color: indigo;
+	color: white;
+	padding: 5px 10px;
+	border-radius: 0.3rem;
+	cursor: pointer;
+	font-size: 26px;
+	width: 15rem;
+	text-decoration: none;
+}
+@media only screen and (max-width: 600px) {
+	.imgg-suggation-head {
+		// background-color: khaki;
+		padding: 10px 10px;
+	}
+  }

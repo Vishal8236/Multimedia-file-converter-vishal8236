@@ -1,6 +1,10 @@
-<div style="color:white">
-	<%= link_to "Upload Image", userimageupload_index_path %>
-	<br /> 
-	<br /> 
-	<%= link_to "Upload Audio", useraudioupload_index_path %>
+<div class="user-upload-services">
+		<div class="image-upload-box">
+			<p><%= fa_icon "picture-o", class:"user-ic-icon" %></p>
+			<span><%= link_to "Upload Image", userimageupload_index_path %></span>
+		</div>
+		<div class="audio-upload-box">
+			<p><%= fa_icon "file-audio-o", class:"user-ic-icon" %></p>
+			<span><%= link_to "Upload Audio", useraudioupload_index_path %></span>
+		</div>
 </div>

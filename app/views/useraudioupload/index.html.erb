@@ -1,12 +1,16 @@
 <div style="color:white">
-	<h1>Show all Audio</h1>
-  <h2><%= link_to "Upload New Audio", new_useraudioupload_path %></h2>
+  <div class="upload-new-item">
+    <h1>All Uploaded Audio</h1>
+    <h2><%= link_to "Upload New Audio", new_useraudioupload_path %></h2>
+  </div>
   <div class="all-imgs">
     <% @all_audio.each do |audio|%>
-      <div class="show-imgs" id="show-img">
-        <%= audio_tag(audio.user_audio.url(), autoplay: true, controls: true) %>
-        <div class="img-options" id="img-options">
-          <p>Play Audio</p>
+      <div class="show-audio" id="show-img">
+        <%= audio_tag(audio.user_audio.url(), controls: true) %> <br><br>
+        <p><%= (audio.user_audio.url).split("/").last%></p>
+        <div class="audio-options" id="img-options">  
+          <p><%= link_to "Download Audio", download_audio_url_path(:audio_url => audio.user_audio.url())  %></p>
+
           <p><%= link_to "Delete Image",  useraudioupload_path(audio.id), method: :delete, confirm: "Are you sure you want to delete ?" %></p>
         </div>
       </div>

@@ -11,6 +11,9 @@
         </div>
         <div class="nav-option-right">
             <% if user_signed_in?%>
+                <% if current_user.admin?%>
+                    <li>Hello Admin</li>
+                <% end %>
                 <li class="menu">
                     <span>
                         <%= link_to current_user.name, root_path, class:'user-name' %>
@@ -23,7 +26,7 @@
                     </ul>
                 </li>
                 <li>
-                    <%= link_to 'logout', destroy_user_session_path, method: :delete %>
+                    <%= link_to 'logout', destroy_user_session_path, method: :delete, class:'logout-btn' %>
                 </li>
             <% else %>
                 <li>
