@@ -1,39 +1,38 @@
 <div class="web-intro">
 	<div class="web-intro-left">
-		<span>Welcome User In Static File Converter.</span>
+		<span>Welcome User In Multimedia File Converter.</span>
 		<div>
-			<span>In this platform you can comvert you static file like image, video, audio in different format and you can also collect you file.</span> 
+			<span>In this platform you can comvert you Multimedia file like image, video, audio in different format and you can also collect you file.</span> 
 		</div>
 	</div>
 	<div class="web-intro-rigth">
 		<%= image_tag("logo.svg", class: "App-logo")%>
-
 	</div>
 </div>
-<div class="user-services">
+<div class="user-services" id="service">
 	<div class="first-feature-line">
-		<div class="image-compression">
+		<div class="image-compressio s-op">
 			<p><%= fa_icon "picture-o", class:"ic-icon" %></p>
 			<span><%= link_to "Image compression", imagecompression_path %></span>
 		</div>
-		<div class="image-conversion">
+		<div class="image-conversion s-op">
 			<p><%= fa_icon "file-text", class:"ic-icon" %></p>
 			<span><%= link_to "Image conversion", imageconverter_path %></span>
 		</div>
-		<div class="audio-conversion">
+		<div class="audio-conversion s-op">
 			<p><%= fa_icon "file-audio-o", class:"ic-icon" %></p>
 			<span><%= link_to "Audio conversion", audio_converter_path %></span>
 		</div>
-		<div class="video-conversion">
+		<div class="video-conversion s-op">
 			<p><%= fa_icon "video-camera", class:"ic-icon" %></p>
 			<span> <%= link_to "Video conversion", video_converter_path %></span>
 		</div>
-		<div class="upload-static">
+		<div class="upload-static s-op">
 			<p><%= fa_icon "cloud-upload", class:"ic-icon" %></p>
 			<span><%= link_to "Upload my own file", mediaFileUpload_path %></span>
 		</div>
 	</div>
 </div>
-<div class="contact-home">
+<div class="contact-home" id="contact">
 	<%= render 'layouts/contact'%>
 </div>

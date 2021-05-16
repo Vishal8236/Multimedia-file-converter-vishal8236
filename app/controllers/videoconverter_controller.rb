@@ -24,7 +24,6 @@ class VideoconverterController < ApplicationController
 
 	    # delete get file
 		FileUtils.rm file
-
 		session[:get_convert_fname] = song_out
 	end
 	

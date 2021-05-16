@@ -18,11 +18,11 @@
 				</div>
 				<div class="video-upload-convert">
 					<div class="imgc-select-file">
-						<%= f.file_field :my_file,class:"file-upload-wrapper" %>
+						<%= f.file_field :my_file,class:"file-upload-wrapper", :required => true %>
 					</div>
 				</div>
 				<div class="action-btn"> 
-					<div class="upload-op">
+					<div class="upload-op" id="active-download-btn">
 						<%= f.submit "Upload" %>
 					</div>
 					<div class="download-op">

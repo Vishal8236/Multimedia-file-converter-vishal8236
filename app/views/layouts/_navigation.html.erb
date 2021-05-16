@@ -1,3 +1,4 @@
+<%= javascript_pack_tag "nav" %>
 <div class="navbar">
     <ul class="navbar-ul">
         <div class="nav-option">
@@ -5,25 +6,25 @@
         </div>
         <div class="nav-option-center">
             <li><%= link_to 'Home', root_path %></li>
-            <li><%= link_to 'Service', root_path %></li>
+            <li><%= link_to 'Service', root_path(:anchor => "service") %></li>
             <li><%= link_to 'About', root_path %></li>
-            <li><%= link_to 'Contact', root_path %></li>
+            <li><%= link_to 'Contact', root_path(:anchor => "contact") %></li>
         </div>
         <div class="nav-option-right">
             <% if user_signed_in?%>
                 <% if current_user.admin?%>
-                    <li>Hello Admin</li>
+                    <li><%= link_to "Show All User's", show_all_user_path %></li>
                 <% end %>
-                <li class="menu">
-                    <span>
-                        <%= link_to current_user.name, root_path, class:'user-name' %>
-                    </span>
-                    <ul>
-                        <li><%= link_to 'Edit Profile', edit_user_registration_path %></li>
-                        <li><a href="#">Child Link</a></li>
-                        <li><a href="#">Child Link</a></li>
-                        <li><a href="#">Child Link</a></li>
-                    </ul>
+                <li>
+                    <div class="dropdown">
+                        <%= link_to current_user.name, root_path, class:'user-name dropbtn', id:"drp-btn" %>
+                        <div id="myDropdown" class="dropdown-content">
+                            <%= link_to 'Edit Profile', edit_user_registration_path %>
+                            <a href="#home">Home</a>
+                            <a href="#about">About</a>
+                            <a href="#contact">Contact</a>
+                        </div>
+                    </div>
                 </li>
                 <li>
                     <%= link_to 'logout', destroy_user_session_path, method: :delete, class:'logout-btn' %>

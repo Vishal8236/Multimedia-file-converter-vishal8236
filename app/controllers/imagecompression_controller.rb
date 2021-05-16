@@ -7,7 +7,6 @@ class ImagecompressionController < ApplicationController
 		require 'fileutils'
 		require "mini_magick"
 		tmp = params[:my_file].tempfile
-		byebug
 		file = File.join("public/imagecompression", params[:my_file].original_filename)
 		FileUtils.cp tmp.path, file
 

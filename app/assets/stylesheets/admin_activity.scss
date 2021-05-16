@@ -1,0 +1,40 @@
+// Place all the styles related to the admin_activity controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+table, td, th {  
+	border: 1px solid #ddd;
+	text-align: left;
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+th, td {
+	padding: 15px;
+	font-size: 25px;
+	text-align: center;
+}
+
+td > p > a{
+	color: white;
+}
+
+.show-users{
+	color: white;
+}
+
+.user-delete-btn{
+	color: white;
+	background-color: #ed1c24;
+	padding: 7px 8px;
+	border-radius: 3px;
+}
+
+.user-profile-btn{
+	color: white;
+	background-color: #1cc3ed;
+	padding: 7px 8px;
+	border-radius: 3px;
+}

@@ -7,14 +7,9 @@
 .user-services > div{
 	margin: 10px 0px;
 }
-
-.first-feature-line{
-	text-align: center;
-	display: flex;
-	flex-direction: row;
-}
-.first-feature-line > div{
-	margin: 0px 20px;
+.s-op{
+	display: inline-block;
+	margin: 20px 20px;
 	border: 1px solid rgb(177, 174, 174);
 	padding: 20px;
 	border-radius: 5px;
@@ -22,6 +17,13 @@
 	height: max-content;
 	align-items: center;
 }
+
+.first-feature-line{
+	text-align: center;
+	// display: flex;
+	// flex-direction: row;
+}
+
 .first-feature-line > div > span{
 	font-size: 40px;
 }
