@@ -6,7 +6,7 @@ class AudioconverterController < ApplicationController
 	def create
 		require 'fileutils'
 		tmp = params[:my_file].tempfile
-		file = File.join("public/audiocoversion", params[:my_file].original_filename)
+		file = File.join("#{Rails.root}/public/audiocoversion", params[:my_file].original_filename)
 		FileUtils.cp tmp.path, file
 
 		output_fname = file.slice(0, file.length()-4)
