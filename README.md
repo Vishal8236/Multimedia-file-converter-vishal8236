@@ -1,24 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+There are some step you have to do before run this project on your local machine.
 
-Things you may want to cover:
+In this project we use some dependency FFMPEG and ImageMagick so you have to install this dependency in your system.
 
-* Ruby version
+after installing this dependency follow below steps
 
-* System dependencies
+step 1 - git clone https://github.com/Vishal8236/Multimedia-file-converter-vishal8236.git
 
-* Configuration
+step 2 - rails bundle install
 
-* Database creation
+step 3 - rails db:migrate
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+step 4 - rails s
