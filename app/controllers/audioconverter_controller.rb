@@ -15,16 +15,23 @@ class AudioconverterController < ApplicationController
 		len = Dir[File.join(path, '**', '*')].count { |file| File.file?(file) }
 		len = len + 1
 
+
 		#conver video file
-		user_id = current_user.id
+		# user_id = current_user.id
 		song_in = "#{Rails.root}/public/audiocoversion/#{params[:my_file].original_filename}"
 		song_out = "#{Rails.root}/public/audiocoversion/output#{len}.#{params[:to]}"
 		system('ffmpeg', '-i', song_in, song_out)
 
 	    # delete get file
 		FileUtils.rm file
-
 		session[:get_audioconvert_fname] = song_out
+		check_file = File.exists?(session[:get_audioconvert_fname])
+		if check_file
+			respond_to do |format|
+				format.js
+			end
+			# flash[:alert] = "File uploaded successfully."
+		end
 	end
 	
 	def downloadfile

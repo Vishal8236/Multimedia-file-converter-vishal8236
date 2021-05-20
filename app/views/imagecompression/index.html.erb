@@ -2,6 +2,9 @@
 	<div class="image-converter">
 		<div class="imgc-heading">
 			<span>Image optimization</span>
+			<div id="show-noti-imgcomp">
+				<div class="loader" id="upload-spinner"></div>
+			</div>
 		</div>
 		<div class="imgc-container">
 			<%= form_with url: '/uploadimagecomp', :html => {:multipart => true} do |f|%>
@@ -21,7 +24,7 @@
 					</div>
 				</div>
 				<div class="action-btn"> 
-					<div class="upload-op">
+					<div class="upload-op" id="upload-imgopti">
 						<%= f.submit "Upload" %>
 					</div>
 					<div class="download-op">

@@ -2,10 +2,10 @@
 	<div class="image-converter">
 		<div class="imgc-heading">
 			<span>Audio Converter</span>
+			<div id="show-noti"></div>
 		</div>
 		<div class="imgc-container">
-			<%= form_with url: '/audiouploadconversion', :html => {:multipart => true} do |f|%>
-
+			<%= form_with url: '/audiouploadconversion',:remote => true, :html => {:multipart => true} do |f|%>
 				<div class="imgc-extension">
 					<div class="imgc-form-group">
 						<label for="exampleFormControlSelect1">From</label>

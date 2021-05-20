@@ -26,12 +26,20 @@ class ImagecompressionController < ApplicationController
 		output_fname = "#{Rails.root}/public/imagecompression/output#{len}.#{get_extention.last}"
 		image.write "#{Rails.root}/public/imagecompression/output#{len}.#{get_extention.last}"
 
-		# byebug
 	    #delete get file
 		FileUtils.rm file
 
+		#create uploaded file loaction session
 		session[:get_compressimg_fname] = output_fname
-		# sleep 5
+
+		#check existing fie
+		check_file = File.exists?(session[:get_compressimg_fname])
+		if check_file
+			respond_to do |format|
+				format.js
+			end
+			# flash[:alert] = "File uploaded successfully."
+		end
 	end
 
 	def downloadfile

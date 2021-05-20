@@ -7,7 +7,7 @@ class VideoconverterController < ApplicationController
 	def create
 		require 'fileutils'
 		tmp = params[:my_file].tempfile
-		file = File.join("public/videocoversion", params[:my_file].original_filename)
+		file = File.join("#{Rails.root}/public/videocoversion", params[:my_file].original_filename)
 		FileUtils.cp tmp.path, file
 
 		output_fname = file.slice(0, file.length()-4)
@@ -25,6 +25,13 @@ class VideoconverterController < ApplicationController
 	    # delete get file
 		FileUtils.rm file
 		session[:get_convert_fname] = song_out
+		check_file = File.exists?(session[:get_convert_fname])
+		if check_file
+			respond_to do |format|
+				format.js
+			end
+			# flash[:alert] = "File uploaded successfully."
+		end
 	end
 	
 	def downloadfile
